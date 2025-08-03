@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  web:
+    build: .
+    container_name: mon-site
+    ports:
+      - "80:80"
+    volumes:
+      - ./site:/usr/share/nginx/html
+    restart: unless-stopped
