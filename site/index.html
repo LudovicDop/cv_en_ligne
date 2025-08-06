@@ -120,17 +120,104 @@
 
 
 <section id="projets" class="projects">
-  <h2>Projets 42</h2>
-  <div class="projects-grid">
-    <a href="https://github.com/ton-projet1" target="_blank">
-      <img src="images/projet1.png" alt="Projet 1">
-    </a>
-    <a href="https://github.com/ton-projet2" target="_blank">
-      <img src="images/projet2.png" alt="Projet 2">
-    </a>
-    <a href="https://github.com/ton-projet3" target="_blank">
-      <img src="images/projet3.png" alt="Projet 3">
-    </a>
+  <h2>Quelques projets 42</h2>
+  <div class="projects-cards">
+    
+    <!-- Minishell -->
+    <div class="project-card">
+      <img src="images/minishell.jpeg" alt="Projet Minishell">
+      <div class="project-info">
+        <h3><a href="https://github.com/LudovicDop/minishell" target="_blank">Minishell</a></h3>
+        <p>Création d'un shell personnalisé. Gestion de processus, parsing, redirections, pipes, signaux Unix. Un projet avancé en programmation système.</p>
+        <span class="badge">C</span>
+        <span class="badge">Unix</span>
+        <span class="badge">Shell</span>
+      </div>
+    </div>
+
+    <!-- FdF -->
+    <div class="project-card">
+      <img src="images/fdf.jpeg" alt="Projet FdF">
+      <div class="project-info">
+        <h3><a href="https://github.com/LudovicDop/fdf" target="_blank">FdF</a></h3>
+        <p>Rendu en 3D isométrique de maillages à partir de données. Gestion graphique, calculs matriciels, gestion d’événements clavier/souris.</p>
+        <span class="badge">C</span>
+        <span class="badge">Algorithmes</span>
+        <span class="badge">Graphics</span>
+      </div>
+    </div>
+
+    <!-- Libft -->
+    <div class="project-card">
+      <img src="images/libft.png" alt="Projet Libft">
+      <div class="project-info">
+        <h3><a href="https://github.com/LudovicDop/libft" target="_blank">Libft</a></h3>
+        <p>Reconstruction de fonctions de la bibliothèque standard C. Gestion de mémoire, manipulation de chaînes, rigueur et bonnes pratiques.</p>
+        <span class="badge">C</span>
+        <span class="badge">Librairie</span>
+        <span class="badge">Rigueur</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="hackathons" class="hackathon-section">
+  <h2>Hackathons</h2>
+  <div class="hackathon-grid">
+
+    <!-- Hackathon 1 -->
+    <div class="hackathon-card">
+      <img src="images/hackathon1.jpg" alt="Hackathon 1">
+      <div class="hackathon-content">
+        <h3>Hack42 Mulhouse 2024</h3>
+        <p><strong>Prix :</strong> 🥇 1er Prix - Projet cybersécurité</p>
+        <p>Détection de vulnérabilités réseau en temps réel avec dashboard en Flask.</p>
+        <a href="https://github.com/LudovicDop/hack42-cyber" target="_blank">Voir le projet</a>
+      </div>
+    </div>
+
+<!-- Hackathon 2 -->
+<div class="hackathon-card">
+  <div class="carousel-container">
+    <img class="carousel-slide active" src="images/hackathon_paris.jpeg" alt="Image 1 - Séjour accessible">
+    <img class="carousel-slide" src="images/hackathon_paris2.jpeg" alt="Image 2 - Séjour accessible">
+    <img class="carousel-slide" src="images/hackathon_paris3.jpg" alt="Image 3 - Séjour accessible">
+  </div>
+  <div class="hackathon-content">
+    <h3>#Hackathon "Tourisme et #Handicap"</h3>
+    <p><strong>Organisé par :</strong> Direction Générale des Entreprises</p>
+    <p><strong>🏆 2ᵉ Prix – Projet :</strong> <strong>“Séjour accessible”</strong></p>
+    <p>
+      Application web simplifiant l'accès aux <strong>restaurants, hébergements et lieux adaptés</strong> pour les personnes en situation de handicap. Interface fluide, rapide, accessible.
+    </p>
+    <p>
+      Objectif : rendre le <strong>tourisme plus inclusif</strong> en mettant en valeur les établissements accessibles.
+    </p>
+    <p style="margin-top: 10px;">
+      <a href="https://github.com/LudovicDop/ia-challenge" target="_blank">Voir le projet sur GitHub</a><br>
+      <a href="https://www.linkedin.com/posts/caroline-porot-488b736_tourisme-numaezrique-42mulhouse-activity-7292482643722469376-vyKV?utm_source=share&utm_medium=member_desktop" target="_blank">
+        Voir la publication officielle 🔗
+      </a>
+    </p>
+  </div>
+</div>
+
+
+
+
+
+    <!-- Hackathon 3 -->
+    <div class="hackathon-card">
+      <img src="images/hackathon3.jpg" alt="Hackathon 3">
+      <div class="hackathon-content">
+        <h3>Code4Green - Strasbourg</h3>
+        <p><strong>Prix :</strong> 🏆 Mention spéciale du jury</p>
+        <p>Application web éco-conçue de suivi de consommation énergétique en temps réel.</p>
+        <a href="https://github.com/LudovicDop/code4green" target="_blank">Voir le projet</a>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -180,6 +267,23 @@
 <footer>
   <p>&copy; 2025 Doppler Ludovic – CV interactif</p>
 </footer>
+
+
+
+
+<script>
+  // Carousel simple pour les cartes Hackathon
+  document.querySelectorAll('.carousel-container').forEach(container => {
+    const slides = container.querySelectorAll('.carousel-slide');
+    let index = 0;
+
+    setInterval(() => {
+      slides[index].classList.remove('active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    }, 3000); // 3 secondes
+  });
+</script>
 
 </body>
 </html>
