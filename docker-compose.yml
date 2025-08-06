@@ -8,4 +8,5 @@ services:
       - "80:80"
     volumes:
       - ./site:/usr/share/nginx/html
+      - ./site/nginx.conf:/etc/nginx/conf.d/default.conf:ro
     restart: unless-stopped

@@ -3,92 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CV Interactif - [Ton Nom]</title>
-  <style>
-    body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; }
-    header { background: #0b3d91; color: white; text-align: center; padding: 50px 20px; }
-    header h1 { margin: 0; }
-    nav { background: #f0f0f0; padding: 10px; text-align: center; position: sticky; top: 0; }
-    nav a { margin: 0 15px; text-decoration: none; color: #0b3d91; font-weight: bold; }
-    section { padding: 50px 20px; max-width: 900px; margin: auto; }
-    h2 { color: #0b3d91; border-bottom: 2px solid #0b3d91; display: inline-block; margin-bottom: 20px; }
-    .skills, .experience, .projects, .contact { margin-top: 30px; }
-    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
-    .projects-grid img { width: 100%; border-radius: 8px; cursor: pointer; transition: 0.3s; }
-    .projects-grid img:hover { transform: scale(1.05); }
-    footer { background: #0b3d91; color: white; text-align: center; padding: 20px; margin-top: 50px; }
-    .btn { background: #0b3d91; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; }
-    .btn:hover { background: #062b66; }
-
-    .experience {
-  max-width: 900px;
-  margin: auto;
-  font-family: "Poppins", sans-serif;
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 2rem;
-}
-
-.timeline {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  position: relative;
-}
-
-.timeline-item {
-  background: #fff;
-  padding: 20px 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  position: relative;
-  overflow: hidden;
-}
-
-.timeline-item h3 {
-  margin: 0;
-  font-size: 1.3rem;
-}
-
-.timeline-item .date {
-  display: block;
-  margin: 5px 0 15px;
-  color: #888;
-  font-size: 0.9rem;
-}
-
-.bar {
-  background: #eee;
-  height: 8px;
-  border-radius: 8px;
-  overflow: hidden;
-  margin-bottom: 15px;
-}
-
-.bar .fill {
-  height: 100%;
-  background: linear-gradient(90deg, #4facfe, #00f2fe);
-  width: var(--duration);
-  animation: growBar 2s ease forwards;
-  border-radius: 8px;
-}
-
-@keyframes growBar {
-  from { width: 0; }
-  to { width: var(--duration); }
-}
-  </style>
+  <title>CV Interactif - Doppler Ludovic</title>
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
 <header>
+  <!-- Bulle contenant la photo de profil -->
+  <div class="profile-pic">
+    <img src="images/photo_de_profil.png" alt="Photo de profil de Ludovic">
+  </div>
+
   <h1>Doppler Ludovic</h1>
   <p>Étudiant à l'école 42 | Futur Expert Systèmes d’Information & Réseaux</p>
   <a href="cv.pdf" class="btn" download>Télécharger le CV PDF</a>
 </header>
+
 
 <nav>
   <a href="#competences">Compétences</a>
@@ -106,6 +36,37 @@ h2 {
     <li>Langues : Français (natif), Anglais (B2)</li>
   </ul>
 </section>
+
+<section id="resume-competences" class="summary-skills">
+  <h2>Résumé de Compétences 42</h2>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <h3>Programmation</h3>
+      <p>C, C++, shell scripting, programmation orientée objet, gestion mémoire, récursivité, structures de données.</p>
+    </div>
+    <div class="skill-card">
+      <h3>Systèmes & Réseaux</h3>
+      <p>Linux, virtualisation (Docker), administration système, réseaux TCP/IP, DNS, routage, sockets.</p>
+    </div>
+    <div class="skill-card">
+      <h3>Algorithmes & IA</h3>
+      <p>Manipulation de piles, tris, listes, arbres, machine à états, optimisation algorithmique.</p>
+    </div>
+    <div class="skill-card">
+      <h3>Développement Web</h3>
+      <p>HTML, CSS, JavaScript, architecture client-serveur, HTTP, back-end, création de serveur web.</p>
+    </div>
+    <div class="skill-card">
+      <h3>Graphisme</h3>
+      <p>Manipulation d’images, interaction clavier/souris, boucle d’événements, moteur de rendu simple (cub3D).</p>
+    </div>
+    <div class="skill-card">
+      <h3>Soft Skills</h3>
+      <p>Autonomie, gestion de projet, rigueur, collaboration, gestion de conflits et travail en groupe.</p>
+    </div>
+  </div>
+</section>
+
 
 <section id="experience" class="experience">
   <h2>Expériences</h2>

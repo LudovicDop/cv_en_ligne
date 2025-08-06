@@ -1,0 +1,210 @@
+/* Styles globaux */
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  margin: 0;
+}
+
+/* En-tête */
+header {
+  background: #0b3d91;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* Navigation */
+nav {
+  background: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #0b3d91;
+  font-weight: bold;
+}
+
+/* Section générale */
+section {
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Titres de sections */
+h2 {
+  color: #0b3d91;
+  border-bottom: 2px solid #0b3d91;
+  display: inline-block;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+/* Bouton */
+.btn {
+  background: #0b3d91;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background: #062b66;
+}
+
+/* Timeline Expériences */
+.experience {
+  font-family: "Poppins", sans-serif;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+}
+
+.timeline-item {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.timeline-item h3 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.timeline-item .date {
+  display: block;
+  margin: 5px 0 15px;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* Barre de progression (durée) */
+.bar {
+  background: #eee;
+  height: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.bar .fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  width: var(--duration);
+  animation: growBar 2s ease forwards;
+  border-radius: 8px;
+}
+
+@keyframes growBar {
+  from { width: 0; }
+  to { width: var(--duration); }
+}
+
+/* Projets */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.projects-grid img {
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.projects-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background: #0b3d91;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+/* Bulle de photo de profil dans l'en-tête */
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 20px;
+  border: 4px solid white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Résumé de compétences 42 */
+.summary-skills {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.summary-skills h2 {
+  color: #0b3d91;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.skill-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.skill-card h3 {
+  color: #0b3d91;
+  margin-bottom: 10px;
+}
+
+.skill-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+
