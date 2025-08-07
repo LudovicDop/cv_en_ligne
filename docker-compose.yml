@@ -1,16 +1,13 @@
-services:
-  web:
-    build: .
-    container_name: mon-site
-    ports:
-      - "8081:80"
-    volumes:
-      - ./site:/usr/share/nginx/html
-      - ./site/nginx.conf:/etc/nginx/conf.d/default.conf:ro
-    restart: unless-stopped
-    networks:
-      - nginx-net
-
-networks:
-  nginx-net:
-    external: true
+  services:
+    nginx:
+      image: nginx-1
+      container_name: nginx-1
+      ports:
+        - "80:80"
+        - "443:443"
+      restart: always
+      volumes:
+        - /run/php:/run/php
+        - ./site/:/var/www/cv_en_ligne/
+        # - /etc/letsencrypt/live/synthesante.com/fullchain.pem:/etc/nginx/certs/fullchain.pem:ro
+        # - /etc/letsencrypt/live/synthesante.com/privkey.pem:/etc/nginx/certs/privkey.pem:ro

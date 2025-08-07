@@ -1,0 +1,43 @@
+# Rediriger HTTP vers HTTPS
+#  server {
+#      listen 80;
+#      server_name synthesante.com www.synthesante.com;
+
+#      location /.well-known/acme-challenge/ {
+#          root /var/www/certbot;
+#      }
+
+#      location / {
+#          return 301 https://$host$request_uri;
+#      }
+#  }
+
+# HTTPS
+server {
+    #listen 443 ssl;
+    listen 443;
+    server_name ludovicdoppler.fr www.ludovicdoppler.fr;
+
+    # ssl_certificate     /etc/nginx/certs/fullchain.pem;
+    # ssl_certificate_key /etc/nginx/certs/privkey.pem;
+
+    root /var/www/cv_en_ligne/;
+    index index.php index.html;
+
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/var/run/php/php8.2-fpm.sock;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include fastcgi_params;
+    }
+
+    location ~ /\.ht {
+        deny all;
+    }
+
+    server_tokens off;
+}

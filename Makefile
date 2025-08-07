@@ -1,2 +1,4 @@
+NGINX_IMAGE = nginx-1
 all: 
-	docker compose up --build -d
+	docker build -t $(NGINX_IMAGE) -f ./site/Dockerfile ./site/
+	docker compose up -d
