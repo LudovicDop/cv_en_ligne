@@ -1,13 +1,41 @@
-  services:
-    nginx:
-      image: nginx-1
-      container_name: nginx-1
-      ports:
-        - "80:80"
-        - "443:443"
-      restart: always
-      volumes:
-        - /run/php:/run/php
-        - ./site/:/var/www/cv_en_ligne/
-        # - /etc/letsencrypt/live/synthesante.com/fullchain.pem:/etc/nginx/certs/fullchain.pem:ro
-        # - /etc/letsencrypt/live/synthesante.com/privkey.pem:/etc/nginx/certs/privkey.pem:ro
+version: '3.8'
+
+services:
+  site:
+    build:
+      context: ./site
+    container_name: cv_site
+    restart: always
+    expose:
+      - "80"
+
+  nginx:
+    image: nginx:alpine
+    container_name: nginx_proxy
+    depends_on:
+      - site
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - certbot-etc:/etc/letsencrypt
+      - certbot-var:/var/lib/letsencrypt
+      - web-root:/var/www/certbot
+    restart: always
+
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    volumes:
+      - certbot-etc:/etc/letsencrypt
+      - certbot-var:/var/lib/letsencrypt
+      - web-root:/var/www/certbot
+    command: certonly --webroot --webroot-path=/var/www/certbot --email your@email.com --agree-tos --no-eff-email -d ludovicdoppler.fr
+    depends_on:
+      - nginx
+
+volumes:
+  certbot-etc:
+  certbot-var:
+  web-root:
