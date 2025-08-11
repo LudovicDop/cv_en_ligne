@@ -696,3 +696,36 @@ nav {
   font-size: 1rem;
   line-height: 1.5;
 }
+
+/* Section Informations personnelles */
+.infos-section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  background: #ffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.infos-section h2 {
+  color: #0b3d91;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.infos-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.infos-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #e3e8f5;
+  font-size: 1rem;
+}
+
+.infos-list li:last-child {
+  border-bottom: none;
+}
