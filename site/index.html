@@ -9,15 +9,54 @@
 <body>
   
 <header>
-  <!-- Bulle contenant la photo de profil -->
-  <div class="profile-pic">
-    <img src="images/photo_de_profil.png" alt="Photo de profil de Ludovic">
-  </div>
+  <div class="header-inner">
+    <!-- Bloc identité -->
+    <div class="identity">
+      <div class="profile-pic">
+        <img src="images/photo_de_profil.png" alt="Photo de profil de Ludovic">
+      </div>
+      <div class="identity-text">
+        <h1>Doppler Ludovic</h1>
+        <p>Étudiant à l'école 42 | Futur Expert Systèmes d’Information & Réseaux</p>
+        <div class="header-actions">
+          <a href="cv.pdf" class="btn" download>Télécharger le CV PDF</a>
+          <a href="#projets" class="btn btn-outline">Voir mes projets</a>
+        </div>
+      </div>
+    </div>
 
-  <h1>Doppler Ludovic</h1>
-  <p>Étudiant à l'école 42 | Futur Expert Systèmes d’Information & Réseaux</p>
-  <a href="cv.pdf" class="btn" download>Télécharger le CV PDF</a>
+    <!-- Carte Contact dans le header -->
+    <aside id="contact" class="contact-card" aria-label="Mes coordonnées">
+      <h2 class="sr-only">Contact</h2>
+      <a class="contact-row" href="mailto:ludovicdop@gmail.com" title="Envoyer un e-mail">
+        <span class="contact-ico">✉️</span>
+        <span>ludovicdop@gmail.com</span>
+      </a>
+      <a class="contact-row" href="tel:+33677640434" title="Appeler le numéro">
+        <span class="contact-ico">📞</span>
+        <span>06 77 64 04 34</span>
+      </a>
+
+      <div class="socials">
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/ludovic-doppler-703a0a245/" target="_blank" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M19 0H5A5 5 0 0 0 0 5v14a5 5 0 0 0 5 5h14a5 5 0 0 0 5-5V5a5 5 0 0 0-5-5zM8 19H5V9h3v10zM6.5 7.732A1.75 1.75 0 1 1 6.5 4.25a1.75 1.75 0 0 1 0 3.482zM19 19h-3v-5.604c0-1.337-.027-3.063-1.868-3.063-1.868 0-2.156 1.459-2.156 2.967V19h-3V9h2.881v1.367h.041c.402-.762 1.381-1.563 2.845-1.563 3.043 0 3.604 2.003 3.604 4.609V19z"/>
+          </svg>
+          <span>LinkedIn</span>
+        </a>
+        <!-- GitHub -->
+        <a href="https://github.com/LudovicDop" target="_blank" aria-label="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 .297C5.37.297 0 5.67 0 12.3c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58 0-.28-.01-1.04-.02-2.04-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.21.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.31.76-1.61-2.67-.31-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23.96-.27 1.98-.4 3-.4s2.04.13 3 .4c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.62-5.48 5.92.43.37.82 1.1.82 2.22 0 1.6-.02 2.9-.02 3.29 0 .32.22.69.83.58 4.76-1.59 8.2-6.08 8.2-11.38C24 5.67 18.63.3 12 .3z"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </aside>
+  </div>
 </header>
+
 
 
 <nav>
@@ -46,49 +85,6 @@
     Sérieux, autonome et motivé, je souhaite m’investir pleinement dans une entreprise pour progresser en <strong>systèmes, réseaux, cybersécurité et développement</strong>.
   </p>
   
-</section>
-<section id="contact" class="contact">
-  <h2>Contact</h2>
-  <p>Email : <a href="mailto:ludovicdop@gmail.com">ludovicdop@gmail.com</a></p>
-  <p>Téléphone : <a href="tel:+33677640434">06 77 64 04 34</a></p>
-  
-  <div style="margin-top: 20px;">
-    <!-- Icône LinkedIn -->
-<!-- Icône LinkedIn corrigée -->
-<a href="https://www.linkedin.com/in/ludovic-doppler-703a0a245/" target="_blank" style="margin-right: 15px; display:inline-block;">
-  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#0b3d91" viewBox="0 0 24 24" style="display:block; overflow:hidden;">
-    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.784 1.764-1.75 1.764zm13.5 11.268h-3v-5.604c0-1.337-.027-3.063-1.868-3.063-1.868 0-2.156 1.459-2.156 2.967v5.7h-3v-10h2.881v1.367h.041c.402-.762 1.381-1.563 2.845-1.563 3.043 0 3.604 2.003 3.604 4.609v5.587z"/>
-  </svg>
-</a>
-
-
-    
-    <!-- Icône GitHub -->
-    <a href="https://github.com/LudovicDop" target="_blank">
-      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#0b3d91" viewBox="0 0 24 24">
-        <path d="M12 .297c-6.63 0-12 5.373-12 
-        12 0 5.303 3.438 9.8 8.205 
-        11.385.6.113.82-.258.82-.577 
-        0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.089-.744.084-.729.084-.729 
-        1.205.084 1.838 1.237 1.838 1.237 
-        1.07 1.835 2.809 1.304 3.495.997.108-.776.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.931 
-        0-1.311.469-2.381 1.236-3.221-.123-.303-.536-1.524.117-3.176 
-        0 0 1.008-.322 3.301 1.23a11.52 
-        11.52 0 0 1 3.003-.404c1.018.005 
-        2.044.138 3.003.404 2.291-1.552 
-        3.297-1.23 3.297-1.23.655 1.653.242 
-        2.874.119 3.176.77.84 1.234 1.91 
-        1.234 3.221 0 4.609-2.804 
-        5.624-5.476 5.921.43.372.823 
-        1.102.823 2.222 0 1.604-.015 
-        2.896-.015 3.286 0 .319.216.694.825.576 
-        4.765-1.587 8.199-6.084 8.199-11.385 
-        0-6.627-5.373-12-12-12z"/>
-      </svg>
-    </a>
-  </div>
-</section>
-
 <section id="competences" class="skills">
   <h2>Compétences</h2>
   <div class="skills-grid">
@@ -123,6 +119,13 @@
   </div>
 </section>
 
+<section id="permis" class="permis-section">
+  <h2>Permis de conduire</h2>
+  <div class="permis-card">
+    <span class="permis-icone">🚗</span>
+    <p>Titulaire du <strong>Permis B </p>
+  </div>
+</section>
 
 <section id="experience" class="experience">
   <h2>Expériences</h2>
